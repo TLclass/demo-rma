@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang thông tin RMA CLUB</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <!--Dau trang-->
+    <header>
+        <div id="gioihan">
+            <div id="logo"> 
+                <!--<img src="img/NAME.png" id="namelogo">-->
+                <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 
+                'Lucida Sans', Arial, sans-serif; font-size: 40px; margin-left: 22px; color: rgb(0, 0, 114);
+                font-weight: bold; ">RMA</h1>
+            </div>
+            <div id="tab">
+                <div id="trangchu">
+                    <a style="color: black; text-decoration: none;" href="index.html">Trang chủ</a>
+                </div>
+                <div id="thongtin">
+                    <a style="color: black; text-decoration: none;" href="thongtin.html">Thông tin</a>
+                </div>
+                <div id="duan">
+                    <a style="color: black; text-decoration: none;" href="duan.html">Dự án</a>
+                </div>
+                <div id="thamgia">
+                    <a style="color: black; text-decoration: none;" href="thamgia.html">Tham gia</a>
+                </div>
+                <div id="bartab" onclick="opentab()">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </div>
+            </div>  
+        </div>
+        </header>
+        <div id="bar2">
+            <a href="index.html"><div class="boxbar2" id="trangchu2">Trang chủ</div></a>
+            <a href="thongtin.html"><div class="boxbar2" id="thongtin2">Thông tin</div></a>
+            <a href="duan.html"><div class="boxbar2" id="duan2">Dự án</div></a>
+            <a href="thamgia.html"><div class="boxbar2" id="thamgia2">Tham gia</div></a>
+        </div>
+    <!--Than trang-->
+    <!--Gioi thieu-->
+
+    <center><div id="muctieuthamgia">
+    <div id="formthamgia" style="margin-top: 10px;">
+        <h2 style="margin: 0;" class="msg">Tham gia</h2>
+        <form style="margin-top: 15px; font-size: 20px;" action="" method="post" id="submit_form">
+            <div ></div>
+            <label  for="hoTen">Họ và tên:</label>
+            <center><input style="width: calc(100% - 10px); height: 30px; border: none;
+            border-bottom: solid 1px black; margin-left: -5px; margin-bottom: 10px; font-size: 20px;" type="text" id="hoTen" name="hoTen" required></center>
+            <label for="lopHoc">Lớp học:</label>
+            <center><input style="width: calc(100% - 10px); height: 30px; border: none;
+            border-bottom: solid 1px black; margin-left: -5px; margin-bottom: 10px; font-size: 20px;" type="text" id="lopHoc" name="lopHoc" required></center>
+            <label for="email">Email:</label>
+            <center><input style="width: calc(100% - 10px); height: 30px; border: none;
+            border-bottom: solid 1px black; margin-left: -5px; margin-bottom: 10px; font-size: 20px;" type="email" id="email" name="email" required></center>
+            <label for="soDienThoai">Số điện thoại:</label>
+            <center><input style="width: calc(100% - 10px); height: 30px; border: none;
+            border-bottom: solid 1px black; margin-left: -5px; margin-bottom: 10px; font-size: 20px;" type="tel" id="soDienThoai" name="soDienThoai" required pattern="[0-9]{10,11}" title="Vui lòng nhập số điện thoại hợp lệ (10 hoặc 11 chữ số)"></center>
+            <center><button type="submit" style="margin-top: 10px; border-radius: 5px;">Gửi thông tin</button></center>
+        </form>
+    </div>
+    </div></center>
+
+
+    <script>
+        document.querySelector('#submit_form').onsubmit = function(e) {
+    e.preventDefault();
+
+    let msgOj = document.querySelector('.msg');
+
+    let fullNameOj = document.querySelector('input[name="hoTen"]');
+    let classOj = document.querySelector('input[name="lopHoc"]');
+    let emailOj = document.querySelector('input[name="email"]');
+    let phoneOj = document.querySelector('input[name="soDienThoai"]');
+
+    let fullName = fullNameOj.value;
+    let classname = classOj.value;
+    let email = emailOj.value;
+    let phone = phoneOj.value;
+
+    let data = {
+        'entry.1476234119': fullName,
+        'entry.264518076': classname,
+        'entry.1520167146': email,
+        'entry.1529149578': phone
+    }
+
+    console.log(fullName);
+    if (fullName.trim() != '' && classname.trim() != '' && email.trim() != '' && phone.trim() != '') {
+        let queryString = new URLSearchParams(data);
+        queryString = queryString.toString();
+        //console.log(queryString);
+        msgOj.innerHTML = '<div class="alert alert-success text-center"> Đang xử lý... </div>'
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", 'https://docs.google.com/forms/u/0/d/e/1FAIpQLScG5jeN9WJ6EH7893AkTj7H_rzH1_zYUI4L0JQFqQvB65DTxQ/formResponse', true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        msgOj.innerHTML = '<div class="alert alert-success text-center"> Gửi dữ liệu thành công </div>'
+        xhr.send(queryString);
+        fullNameOj.value = '';
+        classOj.value = '';
+        emailOj.value = '';
+        phoneOj.value = '';
+    }
+    else {
+        msgOj.innerHTML = '<div class="alert alert-danger text-center"> Hãy thử nhập lại </div>'
+    }
+}
+        var bar2 = document.querySelector("#bar2");
+        var bartab = document.querySelector("#bartab");
+        var check = 0;
+        function opentab() {
+            if (check == 0) {
+                bar2.style.display = "block";
+                check++;
+                bartab.innerHTML = '<i class="fa-solid fa-rectangle-xmark"></i>';
+            }
+            else {
+                bar2.style.display = "none";
+                check = 0;
+                bartab.innerHTML = '<i class="fa-solid fa-bars-staggered"></i>';
+            }
+        }
+    </script>
+</body>
+</html>

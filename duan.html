@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang thông tin RMA CLUB</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <!--Dau trang-->
+    <header>
+        <div id="gioihan">
+            <div id="logo"> 
+                <!--<img src="img/NAME.png" id="namelogo">-->
+                <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 
+                'Lucida Sans', Arial, sans-serif; font-size: 40px; margin-left: 22px; color: rgb(0, 0, 114);
+                font-weight: bold; ">RMA</h1>
+            </div>
+            <div id="tab">
+                <div id="trangchu">
+                    <a style="color: black; text-decoration: none;" href="index.html">Trang chủ</a>
+                </div>
+                <div id="thongtin">
+                    <a style="color: black; text-decoration: none;" href="thongtin.html">Thông tin</a>
+                </div>
+                <div id="duan">
+                    <a style="color: black; text-decoration: none;" href="duan.html">Dự án</a>
+                </div>
+                <div id="thamgia">
+                    <a style="color: black; text-decoration: none;" href="thamgia.html">Tham gia</a>
+                </div>
+                <div id="bartab" onclick="opentab()">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </div>
+            </div>  
+        </div>
+        </header>
+        <div id="bar2">
+            <a href="index.html"><div class="boxbar2" id="trangchu2">Trang chủ</div></a>
+            <a href="thongtin.html"><div class="boxbar2" id="thongtin2">Thông tin</div></a>
+            <a href="duan.html"><div class="boxbar2" id="duan2">Dự án</div></a>
+            <a href="thamgia.html"><div class="boxbar2" id="thamgia2">Tham gia</div></a>
+        </div>
+    <!--Than trang-->
+    <!--Gioi thieu-->
+    <center><div id="duanbox">
+        <h2 style="margin: 0; width: 120px; padding: 10px; text-align: center;
+        border-radius: 10px; color: white; background-color: rgb(0, 0, 114);">Dự án</h2>
+        <div style="width: 100%; margin-top: 0px; display: flex; justify-content: space-around; flex-wrap: wrap;">
+            <div class="boxduan">
+                <img src="img/banner-chemical-equation-balacer.png" alt="" srcset="">
+                <a href="can-bang-hoa-hoc.html"><div id="goproject">Xem Dự Án</div></a>
+            </div>
+            <div class="boxduan">
+                <img src="img/banner-periodic-table.png" alt="" srcset="">
+                <a href="bang-tuan-hoan-hoa-hoc.html"><div id="goproject">Xem Dự Án</div></a>
+            </div>
+            <div class="boxduan">
+                <img src="img/Thống kê số liệu.png" alt="" srcset="">
+                <a href="thong-ke-so-lieu.html"><div id="goproject">Xem Dự Án</div></a>
+            </div>
+        </div>
+    </div></center>
+
+
+
+    <script>
+        var bar2 = document.querySelector("#bar2");
+        var bartab = document.querySelector("#bartab");
+        var check = 0;
+        function opentab() {
+            if (check == 0) {
+                bar2.style.display = "block";
+                check++;
+                bartab.innerHTML = '<i class="fa-solid fa-rectangle-xmark"></i>';
+            }
+            else {
+                bar2.style.display = "none";
+                check = 0;
+                bartab.innerHTML = '<i class="fa-solid fa-bars-staggered"></i>';
+            }
+        }
+    </script>
+</body>
+</html>

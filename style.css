@@ -1,0 +1,321 @@
+body {
+    margin: 0;
+    background-color: #daf1ff;
+    padding-bottom: 50px;
+}
+header {
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+#gioihan {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+#logo {
+    width: 40%;
+}
+#logo h1 {
+    user-select: none;
+}
+#tab {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+#namelogo {
+    height: 40px;
+    width: auto;
+    margin-left: 10px;
+}
+#poster {
+    max-width: calc(100% - 20px);
+    margin: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+#trangchu {
+    width: 150px;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+#trangchu a:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: ease-in 0.40s;
+    -moz-transition: ease-in 0.40s;
+    -webkit-transition: ease-in 0.40s;
+    width: 150px;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+#thongtin {
+    width: 150px;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+#thongtin a:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: ease-in 0.40s;
+    -moz-transition: ease-in 0.40s;
+    -webkit-transition: ease-in 0.40s;
+    width: 150px;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+#duan {
+    width: 150px;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+#duan a:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: ease-in 0.40s;
+    -moz-transition: ease-in 0.40s;
+    -webkit-transition: ease-in 0.40s;
+    width: 150px;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+#thamgia {
+    width: 150px;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+#thamgia a:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: ease-in 0.40s;
+    -moz-transition: ease-in 0.40s;
+    -webkit-transition: ease-in 0.40s;
+    width: 150px;
+    height: 60px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+@media (max-width : 980px) {
+    #trangchu {
+        display: none;
+    }
+    #thongtin {
+        display: none;
+    }
+    #duan {
+        display: none;
+    }
+    #thamgia {
+        display: none;
+    }
+    #bartab {
+        display: flex;
+    }
+    #bar2 {
+        width: 85%;
+        position: fixed;
+        right: -10px;
+    }
+    .boxbar2 {
+        width: 100%;
+    }
+}
+#muctieuthamgia {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#muctieu {
+    width: 650px;
+    height: auto;
+    border-radius: 10px;
+    background-color: white;
+    margin: 10px;
+    padding: 15px;
+    text-align: left;
+    margin-top: 0;
+}
+#formthamgia {
+    width: 440px;
+    height: 360px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    text-align: left;
+    margin-top: 0;
+}
+@media (max-width : 1200px) {
+    #muctieu {
+        width: 100%;
+    }
+    #formthamgia {
+        min-width: 0px;
+    }
+    .anhhoatdong {
+        min-width: 0px;
+    }
+    
+}
+#ngoai {
+    max-width: 1200px;
+}
+@media (max-width : 600px) {
+    
+}
+#poster2 {
+    width: 100%;
+    display: block;
+}
+@media (max-width : 600px) {
+   
+}
+button {
+    background-color: #28a745; /* Màu nền nút */
+    color: white; /* Màu chữ nút */
+    border: none; /* Bỏ viền */
+    padding: 10px; /* Khoảng cách bên trong nút */
+    cursor: pointer; /* Hiệu ứng khi di chuột */
+    border-radius: 4px; /* Bo góc cho nút */
+    width: 80%; /* Chiều rộng đầy đủ */
+    margin-left: -5px;
+}
+
+#thongtinbox {
+    max-width: 1150px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    text-align: left;
+    margin-top: 0;
+}
+.anhhoatdong {
+    width: 370px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#duanbox {
+    max-width: 1150px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    text-align: left; 
+}
+.boxduan {
+    width: 300px;
+    height: 290;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+}
+.boxduan img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.boxduan a {
+    text-decoration: none;
+}
+#goproject {
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.082);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+#bartab {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.082);
+    position:fixed;
+    right: 10px;
+    top: 10px;
+}
+#bar2 {
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.082);
+    position: fixed;
+    right: 10px;
+    padding: 15px;
+    display: none;
+    transition: ease-in 0.40s;
+    -moz-transition: ease-in 0.40s;
+    -webkit-transition: ease-in 0.40s;
+}
+#bar2 a {
+    text-decoration: none;
+    color: white;
+}
+.boxbar2 {
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.082);
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: rgb(0, 0, 114);
+    user-select: none;
+}
